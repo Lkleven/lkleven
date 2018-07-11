@@ -2,8 +2,9 @@
   "name": "lkleven",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lkleven.github.io/lkleven",
+  "homepage": "https://lkleven.github.io/lkleven/",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
