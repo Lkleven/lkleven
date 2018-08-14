@@ -1,0 +1,6 @@
+{
+  "printWidth": 160,
+  "parser": "flow",
+  "singleQuote": true,
+  "semi": false
+}
