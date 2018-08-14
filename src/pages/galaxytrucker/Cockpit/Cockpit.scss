@@ -1,0 +1,11 @@
+.cockpit{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    div{
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        border: 1px solid red;
+    }
+}
