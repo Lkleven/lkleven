@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.scss'
-import GalaxyTrucker from './pages/galaxytrucker/galaxytrucker.jsx'
+import GalaxyTrucker from './pages/galaxytrucker/GalaxyTrucker/GalaxyTrucker'
 
 class App extends Component {
   render() {
