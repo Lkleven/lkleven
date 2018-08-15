@@ -1,6 +1,9 @@
 import React from 'react'
 import './Cockpit.scss'
 
+const shipSizes = Object.freeze({ small: 1, medium: 2, large: 3 })
+//shipSizes[this.state.shipSize]
+
 const Cockpit = props => {
   let symbols = []
 
@@ -8,12 +11,7 @@ const Cockpit = props => {
     symbols.push(<div />)
   }
 
-  return (
-    <div className="cockpit">
-      {symbols}
-      dada
-    </div>
-  )
+  return <div className="cockpit">{symbols}</div>
 }
 
 export default Cockpit

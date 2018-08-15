@@ -16,7 +16,7 @@ class GridElement extends Component {
   }
 
   setCockpit() {
-    this.setState({ isCockpit: true })
+    this.setState({ isCockpit: !this.state.isCockpit })
   }
 
   render() {
@@ -30,13 +30,15 @@ class GridElement extends Component {
         onClick={this.toggleSelected}
       >
         {this.state.selected && (
-          <div className="tileOptions">
-            {' '}
-            <button className="button" onClick={e => this.props.setCockpitTile(e, this)}>
-              abc
-            </button>{' '}
+          <React.Fragment>
+            <div className="tileOptions">
+              {' '}
+              <button className="button" onClick={e => this.props.setCockpitTile(e, this)}>
+                abc
+              </button>{' '}
+            </div>
             {this.props.isCockpit && <Cockpit cockpitLevel={3} />}
-          </div>
+          </React.Fragment>
         )}
       </div>
     )

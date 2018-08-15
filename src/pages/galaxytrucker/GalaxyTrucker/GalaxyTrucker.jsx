@@ -4,8 +4,6 @@ import './GalaxyTrucker.scss'
 
 const TILES_MAX = 45
 
-const shipSizes = Object.freeze({ 1: 'small', 2: 'medium', 3: 'large' })
-
 class GalaxyTrucker extends Component {
   constructor(props) {
     super(props)
@@ -29,8 +27,7 @@ class GalaxyTrucker extends Component {
   }
 
   updateShipSize() {
-    let shipSize =
-      this.state.tileCount <= 17 ? shipSizes['1'] : this.state.tileCount < 25 ? shipSizes['2'] : shipSizes['3']
+    let shipSize = this.state.tileCount <= 17 ? 'small' : this.state.tileCount < 25 ? 'medium' : 'large'
 
     this.setState({ shipSize: shipSize })
   }
@@ -44,16 +41,17 @@ class GalaxyTrucker extends Component {
 
     const tileNo = tile.state.tileNumber
 
-    {
-      tiles[tileNo] ? (tiles[tileNo] = null) : (tiles[tileNo] = tile)
-    }
+    tiles[tileNo] ? (tiles[tileNo] = null) : (tiles[tileNo] = tile)
 
     this.setState({ tiles: tiles })
   }
 
   setCockpitTile = (event, tile) => {
     event.stopPropagation()
-    this.setState({ cockpitTile: tile.props.counter })
+    let cockpitTile = this.state.cockpitTile
+
+    cockpitTile === tile.props.counter ? (cockpitTile = undefined) : (cockpitTile = tile.props.counter)
+    this.setState({ cockpitTile: cockpitTile })
   }
 
   render() {
@@ -71,11 +69,11 @@ class GalaxyTrucker extends Component {
 
     return (
       <div className="galaxytrucker">
-        <h2>{this.state.cockpitTile}</h2>
         <h2 className="h2">
           Tiles: {this.state.tileCount}/{TILES_MAX}
         </h2>
         <input placeholder="Ship name" />
+
         <p>Ship size: {this.state.shipSize}</p>
         <div className="grid">{gridElements}</div>
       </div>
