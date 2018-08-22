@@ -1,7 +1,7 @@
 import React from 'react'
 import './Cockpit.scss'
 
-const shipSizes = Object.freeze({ small: 1, medium: 2, large: 3 })
+//const shipSizes = Object.freeze({ small: 1, medium: 2, large: 3 })
 //shipSizes[this.state.shipSize]
 
 const Cockpit = props => {
