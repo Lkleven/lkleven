@@ -1,0 +1,10 @@
+$gridSize: 140px;
+$elementWidth: calc(100% / 9);
+//TODO add print DIV button
+.galaxytrucker {
+  margin: 80px 0;
+
+  @media print {
+    -webkit-print-color-adjust: exact;
+  }
+}
