@@ -36,7 +36,7 @@ class GridElement extends Component {
           <React.Fragment>
             <div className="tileOptions">
               <TileButton icon={astronaut} onClickFunction={this.props.setCockpitTile} tile={this} />
-              <TileButton onClickFunction={this.props.setCockpitTile} tile={this} diceDots={5} />
+              <TileButton onClickFunction={this.props.setCockpitTile} tile={this} diceDots={3} />
             </div>
             {this.props.isCockpit && <Cockpit cockpitLevel={3} />}
           </React.Fragment>

@@ -19,11 +19,15 @@ button{
     }
 
     .diceDots{
+        display: grid;
+        grid-template-columns: repeat(2);
+        grid-gap: 2px;
+
         div{
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             border-radius: 50px;
-            background: gradient(red, yellow);
+            background: black;
         }
     }
 }
