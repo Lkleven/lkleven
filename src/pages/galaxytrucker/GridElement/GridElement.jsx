@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Cockpit from '../Cockpit/Cockpit'
+import TileButton from '../TileButton/TileButton'
 import './GridElement.scss'
 import cn from 'classnames'
+
+const astronaut = require('../../../assets/icons/astronaut.svg')
 
 class GridElement extends Component {
   constructor(props) {
@@ -32,10 +35,8 @@ class GridElement extends Component {
         {this.state.selected && (
           <React.Fragment>
             <div className="tileOptions">
-              {' '}
-              <button className="button" onClick={e => this.props.setCockpitTile(e, this)}>
-                abc
-              </button>{' '}
+              <TileButton icon={astronaut} onClickFunction={this.props.setCockpitTile} tile={this} />
+              <TileButton onClickFunction={this.props.setCockpitTile} tile={this} diceDots={5} />
             </div>
             {this.props.isCockpit && <Cockpit cockpitLevel={3} />}
           </React.Fragment>

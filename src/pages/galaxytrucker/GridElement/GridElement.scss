@@ -43,6 +43,8 @@
 
       &:hover {
         background: hotpink;
+        background: none;
+        opacity: 1;
       }
     }
 
@@ -63,19 +65,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px;
-
-    button{
-        max-height: calc(33% - 2px);
-        border-radius: 10px;
-        background: blue;
-        border: none;
-        z-index: 20;
-
-        &:hover{
-            background: yellow;
-        }
-        display: none;
-    }
 
     &:hover{
         button{

@@ -1,0 +1,29 @@
+button{
+    max-height: calc(33% - 2px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: white;
+    border: none;
+    z-index: 20;
+    outline: none;
+
+    &:hover{
+        background: yellow;
+    }
+    display: none;
+
+    img{
+      width: 100%;
+      height: 100%;
+      transform: scale(1.4);
+    }
+
+    .diceDots{
+        div{
+            width: 6px;
+            height: 6px;
+            border-radius: 50px;
+            background: gradient(red, yellow);
+        }
+    }
+}
