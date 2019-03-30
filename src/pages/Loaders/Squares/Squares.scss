@@ -1,0 +1,64 @@
+
+.squares{
+    width: 40px;
+    height: 40px;
+    margin: 40px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span{
+        animation-name: loading;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        position: relative;
+        line-height: 0;
+
+        &:first-of-type{
+            transform-origin: bottom right;
+            bottom: 2px;
+            left: -2px;
+            order: 1;
+        }
+
+        &:nth-of-type(2){
+            transform-origin: bottom left;
+            bottom: 2px;
+            left: 2px;
+            order: 2;
+        }
+
+        &:nth-of-type(4){
+            transform-origin: top right;
+            bottom: -2px;
+            left: -2px;
+            order: 3;
+        }
+
+        &:nth-of-type(3){
+            transform-origin: top left;
+            bottom: -2px;
+            left: 2px;
+            order: 4;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1) ;
+    }
+    25% {
+        transform: scale(1.0) ; //remove if smoother is wanted
+    }
+    50% {
+        transform: scale(1.33) ;
+        filter: brightness(2); //20 is fancy?
+    }
+    100% {
+        transform: scale(1) ;
+    }
+}
