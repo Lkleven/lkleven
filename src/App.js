@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <header>
           {' '}
-          <h1>Galaxy Trucker Templates</h1>
+          <h1>Galaxy Trucker Templates a</h1>
         </header>
         <GalaxyTrucker />
         <Loaders />
